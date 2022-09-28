@@ -1,0 +1,38 @@
+﻿@model List<Company.Models.Domain.Employee>
+@* Beacuse we know the model it will be a list of type employees. Since it will be a list of employees have to wrap it in List *@
+
+@{
+}
+<h1>Employees</h1>
+
+@*now we will use a for loop so that we can loop through the listr of the employees and display all in the table*@
+
+<table class="table">
+    @*this class is a bootstrap class*@
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Date of Birth</th>
+            <th>Department</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>@employee.Salary</td>
+                <td>@employee.DateOfBirth.ToString("MM-dd-yyyy")</td>
+                <td>@employee.Department</td>
+                <td><a class = "btn btn-primary" href="Employees/View/@employee.Id">View</a></td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

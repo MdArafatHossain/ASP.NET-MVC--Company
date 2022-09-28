@@ -1,0 +1,38 @@
+﻿@model Company.Models.AddEmployeeViewModel
+    
+
+@{
+}
+<h1 >Add Employee</h1>
+
+<form method="post" action = "Add" class= "mt-5" >
+    @* the first property we want is to be Name and it will come from view model----so we have to create a view model first
+      ....We will create a view model class in Models*@
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" asp-for ="Name">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email Address</label>
+    <input type="email" class="form-control" asp-for ="Email">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Salary</label>
+    <input type="number" class="form-control" asp-for ="Salary">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
+    <input type="date" class="form-control" asp-for ="DateOfBirth">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Department</label>
+    <input type="text" class="form-control" asp-for ="Department">
+    
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
